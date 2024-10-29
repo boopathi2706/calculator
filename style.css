@@ -56,7 +56,7 @@ select{
 .one{
     display: flex;
     flex-direction: column;
-    margin-left: 60px;
+    margin-left: 50px;
     line-height: 0.7;
     margin-top: 20px;
 }
@@ -215,7 +215,7 @@ th, td {
     .one{
         display: flex;
         flex-direction: column;
-        margin-left: 35px;
+        margin-left: 45px;
         line-height: 0.6;
         margin-top: 15px;
         font-size: 13px;
