@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <main style="display:flex;">
+            <div class="image">
+                <div>
+                 <img src="Logo.png" alt="">
+                </div>
+             </div>
+             <h3>CGPA CALCULATOR</h3>
+             <div class="one">
+                 <label for="credit">Enter Credit</label><br>
+                 <select id="Credit" name="credit_value">
+                     <option value=""></option>
+                     <option value="4">4</option>
+                     <option value="3">3</option>
+                     <option value="2">2</option>
+                     <option value="1">1</option>
+                 </select>
+             </div>
+             <div class="one">
+                 <label for="grade_alpha">Enter Grade</label><br>
+                 <select id="grade_alpha" name="grade_value">
+                     <option value=""></option>
+                     <option value="O">O</option>
+                     <option value="A+">A+</option>
+                     <option value="A">A</option>
+                     <option value="B+">B+</option>
+                     <option value="B">B</option>
+                     <option value="C">C</option>
+                 </select>
+             </div>
+             <button onclick="calculate()" class="calculate">CALCULATE</button>
+             <p class="score">CGPA is = <span id="score1">00.00</span></p>
+             <div class="add">
+                 <p class="content">Do want See table? Click It</p>
+                 <button onclick="createTable()" class="bgn">Veiw Table</button>
+             </div>
+      
+    </main>
+    <div class="tab" style="display: none;">
+        
+        <table id="dynamicTable">
+            <thead>
+                <tr>
+                    <th>R.No</th>
+                    <th>Credit</th>
+                    <th>Grade</th>
+                    <th>GPA</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="buttons">
+            <button class="back" onclick="back()">BACK</button>
+            <button class="remove" onclick="remove()">REMOVE LAST ONE</button>
+            <button class="download" onclick="downloadTableAsImage()">DOWNLOAD</button>
+        </div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

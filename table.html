@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Table</title>
+</head>
+<body>
+    <table id="dynamicTable" border="1">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Credit</th>
+                <th>Grade</th>
+                <th>Grade Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Retrieve the data from localStorage
+        const creditArray = JSON.parse(localStorage.getItem("creditArray")) || [];
+        const GradeArray = JSON.parse(localStorage.getItem("GradeArray")) || [];
+        const Grade_valueArray = JSON.parse(localStorage.getItem("Grade_valueArray")) || [];
+
+        var tablebody = document.querySelector("#dynamicTable tbody");
+
+        // Ensure the arrays have the same length
+        if (creditArray.length === GradeArray.length && GradeArray.length === Grade_valueArray.length) {
+            for (let i = 0; i < creditArray.length; i++) {
+                const row = document.createElement("tr");
+
+                const cell1 = document.createElement("td");
+                cell1.textContent = i + 1;
+                row.appendChild(cell1);
+
+                const cell2 = document.createElement("td");
+                cell2.textContent = creditArray[i];
+                row.appendChild(cell2);
+
+                const cell3 = document.createElement("td");
+                cell3.textContent = GradeArray[i];
+                row.appendChild(cell3);
+
+                const cell4 = document.createElement("td");
+                cell4.textContent = Grade_valueArray[i];
+                row.appendChild(cell4);
+
+                // Append the row to the table body
+                tablebody.appendChild(row);
+            }
+        } else {
+            console.error("Arrays are not the same size!");
+        }
+    </script>
+</body>
+</html>
