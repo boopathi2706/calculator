@@ -56,7 +56,7 @@ select{
 .one{
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
+    margin-left: 60px;
     line-height: 0.7;
     margin-top: 20px;
 }
