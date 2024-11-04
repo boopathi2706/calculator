@@ -215,7 +215,7 @@ th, td {
     .one{
         display: flex;
         flex-direction: column;
-        margin-left: 70px;
+        margin-left: 50px;
         line-height: 0.6;
         margin-top: 15px;
         font-size: 13px;
