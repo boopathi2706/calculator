@@ -219,6 +219,9 @@ th, td {
         line-height: 0.6;
         margin-top: 15px;
         font-size: 13px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
     }
     .calculate{
         width: 120px;
