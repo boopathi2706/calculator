@@ -208,7 +208,7 @@ th, td {
         color: #225FA7;
     }
     select{
-        width: 250px;
+        width: 255px;
         height: 35px;
         font-size: 13px;
     }
@@ -219,15 +219,12 @@ th, td {
         line-height: 0.6;
         margin-top: 15px;
         font-size: 13px;
-        align-items: center;
-        justify-content: center;
-        display: flex;
     }
     .calculate{
         width: 120px;
         height: 30px;
         margin-top: 15px;
-        margin-left: 26%;
+        margin-left: 33%;
         background-color: #3B87F9;
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.277);
         border: none;
@@ -235,6 +232,11 @@ th, td {
         font-size: 12px;
         font-weight:bold;
         border-radius: 3px;
+    }
+    .score{
+        text-align: center;
+        font-size: 20px;
+        margin-left: 10px;
     }
     table {
         width: 55%;
